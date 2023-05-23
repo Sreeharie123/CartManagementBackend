@@ -1,6 +1,6 @@
 export interface productInterface{
-
     productName:string,
     imgUrl:string,
-    quantity:[] 
+    quantity:number
+    price:number
 }
