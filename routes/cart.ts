@@ -1,5 +1,5 @@
 import express from "express"
-import { addCart, allCart, editCart } from "../controller/cart"
+import { CartLength, addCart, allCart, editCart, lessCart } from "../controller/cart"
 
 
 const route=express.Router()
@@ -11,6 +11,12 @@ route.get('/all',allCart)
 route.post('/add',addCart)
 
 //edit cart
-route.put("/quantity/:productId",editCart)
+route.put("/add",editCart)
+
+//les cart
+route.put("/less",lessCart)
+
+//length
+route.get('/length',CartLength)
  
 export const cartRoute=route
